@@ -1,0 +1,80 @@
+// Copyright (c) 2022 The ZMK Contributors
+// SPDX-License-Identifier: MIT
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
+#include <dt-bindings/zmk/pointing.h>
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp ENTER>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+            &kp Q      &kp W      &kp F       &kp P        &kp B              &kp J       &kp L         &kp U        &kp Y      &kp SINGLE_QUOTE
+            &lt 5 A    &mt LALT R &mt LCTRL S &mt LSHIFT T &kp G              &kp M       &mt RSHIFT N  &mt RCTRL E  &mt RALT I &mt RGUI O
+            &kp Z      &kp X      &kp C       &kp D        &kp V              &kp K       &kp H         &kp COMMA    &kp DOT    &kp FSLH
+                                              &lt 4 ESC    &lt 2 TAB          &lt 1 SPACE &lt 3 BSPC
+            >;
+        };
+
+        left_layer {
+            bindings = <
+            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTRK  &kp EQUAL  &kp GRAVE
+            &kp UNDER  &kp MINUS  &kp LPAR   &kp RPAR   &kp PLUS           &kp TILDE  &kp LBRC   &kp RBRC   &kp SEMI   &kp LS(SEMI)
+            &none      &none      &none      &kp LBKT   &kp RBKT           &none      &kp PIPE   &kp BSLH   &none      &none
+                                             &none      &none              &none      &none
+            >;
+        };
+
+        right_layer {
+            bindings = <
+            &none      &none      &none      &none      &none             &kp MINUS  &kp N7     &kp N8     &kp N9     &kp FSLH
+            &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT &none             &kp PLUS   &kp N4     &kp N5     &kp N6     &kp ASTRK
+            &none      &none      &none      &none      &none             &none      &kp N1     &kp N2     &kp N3     &none
+                                             &none      &none             &kp N0     &kp COMMA
+            >;
+        };
+
+        mouse_layer {
+            bindings = <
+            &none      &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &none             &none      &none      &none      &none      &none
+            &none      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none             &none      &mkp LCLK  &mkp RCLK  &mkp MCLK  &none
+            &none      &none          &none          &none           &none             &none      &none      &none      &none      &none
+                                                     &none           &none             &none      &none
+            >;
+        };
+
+        media_layer {
+            bindings = <
+            &kp PSCRN  &kp C_BRI_DN &none        &kp C_BRI_UP   &kp C_AL_CALC        &kp F12     &kp F7      &kp F8     &kp F9     &none
+            &kp C_PREV &kp C_VOL_DN &kp C_PP     &kp C_VOL_UP   &kp C_NEXT           &kp F11     &kp F4      &kp F5     &kp F6     &none
+            &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2   &none                &kp F10     &kp F1      &kp F2     &kp F3     &none
+                                                 &none          &none                &bt BT_CLR  &bt BT_CLR_ALL
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+            &none     &none     &none     &none       &none             &none     &kp END    &kp PG_DN  &kp PG_UP  &kp HOME
+            &none     &kp LGUI  &kp LALT  &kp LCTRL   &none             &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
+            &none     &none     &none     &none       &none             &none     &none      &none      &none      &none
+                                          &none       &none             &none     &none
+            >;
+        };
+    };
+};
