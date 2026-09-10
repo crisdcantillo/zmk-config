@@ -38,10 +38,10 @@
 
         default_layer {
             bindings = <
-            &kp Q      &kp W      &kp F       &kp P        &kp B              &kp J       &kp L         &kp U        &kp Y      &kp SINGLE_QUOTE
-            &lt 5 A    &mt LALT R &mt LSHIFT S &mt LCTRL T &kp G              &kp M       &mt RCTRL N  &mt RSHIFT E  &mt RALT I &mt RGUI O
-            &kp Z      &kp X      &kp C       &kp D        &kp V              &kp K       &kp H         &kp COMMA    &kp DOT    &kp FSLH
-                                              &lt 4 ESC    &lt 2 TAB          &lt 1 SPACE &lt 3 BSPC
+            &kp Q      &kp W      &kp F        &kp P        &kp B              &kp J       &kp L         &kp U        &kp Y      &kp SINGLE_QUOTE
+            &mt LGUI A &mt LALT R &mt LSHIFT S &mt LCTRL T  &kp G              &kp M       &mt RCTRL N  &mt RSHIFT E  &mt RALT I &mt RGUI O
+            &kp Z      &kp X      &kp C        &kp D        &kp V              &kp K       &kp H         &kp COMMA    &kp DOT    &kp FSLH
+                                               &lt 4 ESC    &lt 2 TAB          &lt 1 SPACE &lt 3 BSPC
             >;
         };
 
@@ -63,30 +63,21 @@
             >;
         };
 
-        mouse_layer {
+        move_layer {
             bindings = <
-            &none      &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &none             &none      &none      &none      &none      &none
-            &none      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none             &none      &mkp LCLK  &mkp RCLK  &mkp MCLK  &none
-            &none      &none          &none          &none           &none             &none      &none      &none      &none      &none
-                                                     &none           &none             &none      &none
+            &none      &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &none             &none        &mkp LCLK    &mkp RCLK  &mkp MCLK     &none
+            &none      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none             &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT     &none
+            &none      &kp LG(N1)     &kp LG(N2)     &kp LG(N3)      &none             &kp LG(LEFT) &kp LG(DOWN) &kp LG(UP) &kp LG(RIGHT) &none
+                                                     &none           &none             &none        &none
             >;
         };
 
         media_layer {
             bindings = <
-            &kp PSCRN  &kp C_BRI_DN &none        &kp C_BRI_UP   &kp C_AL_CALC        &kp F12     &kp F7      &kp F8     &kp F9     &none
+            &kp PSCRN  &kp C_BRI_DN &none        &kp C_BRI_UP   &kp C_AL_CALC        &kp F12     &kp F7      &kp F8     &kp F9     &bt BT_CLR
             &kp C_PREV &kp C_VOL_DN &kp C_PP     &kp C_VOL_UP   &kp C_NEXT           &kp F11     &kp F4      &kp F5     &kp F6     &none
-            &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2   &none                &kp F10     &kp F1      &kp F2     &kp F3     &none
-                                                 &none          &none                &bt BT_CLR  &bt BT_CLR_ALL
-            >;
-        };
-
-        nav_layer {
-            bindings = <
-            &none     &none     &none     &none       &none             &none     &kp END    &kp PG_DN  &kp PG_UP  &kp HOME
-            &none     &kp LGUI  &kp LALT  &kp LCTRL   &none             &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
-            &none     &none     &none     &none       &none             &none     &none      &none      &none      &none
-                                          &none       &none             &none     &none
+            &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2   &none                &kp F10     &kp F1      &kp F2     &kp F3     &bt BT_CLR_ALL
+                                                 &none          &none                &none       &none
             >;
         };
     };
