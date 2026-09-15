@@ -38,46 +38,55 @@
 
         default_layer {
             bindings = <
-            &kp Q      &kp W      &kp F        &kp P        &kp B              &kp J       &kp L         &kp U        &kp Y      &kp SINGLE_QUOTE
-            &mt LGUI A &mt LALT R &mt LSHIFT S &mt LCTRL T  &kp G              &kp M       &mt RCTRL N  &mt RSHIFT E  &mt RALT I &mt RGUI O
-            &kp Z      &kp X      &kp C        &kp D        &kp V              &kp K       &kp H         &kp COMMA    &kp DOT    &kp FSLH
-                                               &lt 4 ESC    &lt 2 TAB          &lt 1 SPACE &lt 3 BSPC
+            &kp Q        &kp W          &kp F          &kp P           &kp B               &kp J            &kp L         &kp U          &kp Y          &kp SINGLE_QUOTE
+            &lt 5 A      &mt LALT R     &mt LSHIFT S   &mt LCTRL T     &kp G               &kp M            &mt RCTRL N   &mt RSHIFT E   &mt RALT I     &mt RGUI O
+            &kp Z        &kp X          &kp C          &kp D           &kp V               &kp K            &kp H         &kp COMMA      &kp DOT        &kp FSLH
+                                                       &lt 4 ESC       &lt 2 TAB           &lt 1 SPACE      &lt 3 BSPC
             >;
         };
 
         left_layer {
             bindings = <
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTRK  &kp EQUAL  &kp GRAVE
-            &kp UNDER  &kp MINUS  &kp LPAR   &kp RPAR   &kp PLUS           &kp TILDE  &kp LBRC   &kp RBRC   &kp SEMI   &kp COLON
-            &none      &none      &kp LBKT   &kp RBKT   &none              &none      &kp PIPE   &kp BSLH   &none      &none
-                                             &none      &none              &none      &none
+            &kp EXCL     &kp AT         &kp HASH       &kp DLLR        &kp PRCNT            &kp CARET      &kp AMPS       &kp ASTRK      &kp EQUAL      &kp GRAVE
+            &kp UNDER    &kp MINUS      &kp LPAR       &kp RPAR        &kp PLUS             &kp TILDE      &kp LBRC       &kp RBRC       &kp SEMI       &kp COLON
+            &none        &none          &kp LBKT       &kp RBKT        &none                &none          &kp PIPE       &kp BSLH       &none          &none
+                                                       &none           &none                &none          &none
             >;
         };
 
         right_layer {
             bindings = <
-            &none      &none      &none      &none      &none             &kp MINUS  &kp N7     &kp N8     &kp N9     &kp FSLH
-            &kp LGUI   &kp LALT   &kp LSHIFT &kp LCTRL  &none             &kp PLUS   &kp N4     &kp N5     &kp N6     &kp ASTRK
-            &none      &none      &none      &none      &none             &none      &kp N1     &kp N2     &kp N3     &none
-                                             &none      &none             &kp N0     &kp COMMA
+            &none        &none          &none          &none           &none                &kp MINUS      &kp N7         &kp N8         &kp N9         &kp FSLH
+            &kp LGUI     &kp LALT       &kp LSHIFT     &kp LCTRL       &none                &kp PLUS       &kp N4         &kp N5         &kp N6         &kp ASTRK
+            &none        &none          &none          &none           &none                &none          &kp N1         &kp N2         &kp N3         &none
+                                                       &none           &none                &kp N0         &none
             >;
         };
 
-        move_layer {
+        mouse_layer {
             bindings = <
-            &none      &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &none             &none        &mkp LCLK    &mkp RCLK  &mkp MCLK     &none
-            &none      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none             &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT     &none
-            &none      &kp LG(N1)     &kp LG(N2)     &kp LG(N3)      &none             &kp LG(LEFT) &kp LG(DOWN) &kp LG(UP) &kp LG(RIGHT) &none
-                                                     &none           &none             &none        &none
+            &none        &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &none                &none          &none          &none          &none          &none
+            &none        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none                &none          &mkp LCLK      &mkp RCLK      &mkp MCLK      &none
+            &none        &none          &none          &none           &none                &none          &none          &none          &none          &none
+                                                       &none           &none                &none          &none
             >;
         };
 
         media_layer {
             bindings = <
-            &kp PSCRN  &kp C_BRI_DN &none        &kp C_BRI_UP   &kp C_AL_CALC        &kp F12     &kp F7      &kp F8     &kp F9     &bt BT_CLR
-            &kp C_PREV &kp C_VOL_DN &kp C_PP     &kp C_VOL_UP   &kp C_NEXT           &kp F11     &kp F4      &kp F5     &kp F6     &none
-            &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2   &none                &kp F10     &kp F1      &kp F2     &kp F3     &bt BT_CLR_ALL
-                                                 &none          &none                &none       &none
+            &kp PSCRN    &kp C_BRI_DN   &none          &kp C_BRI_UP    &kp C_AL_CALC        &kp F12        &kp F7         &kp F8         &kp F9         &bt BT_CLR
+            &kp C_PREV   &kp C_VOL_DN   &kp C_PP       &kp C_VOL_UP    &kp C_NEXT           &kp F11        &kp F4         &kp F5         &kp F6         &none
+            &none        &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &none                &kp F10        &kp F1         &kp F2         &kp F3         &bt BT_CLR_ALL
+                                                       &none           &none                &none          &none
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+            &none        &none          &none          &none           &none                &none          &kp LG(N1)     &kp LG(N2)     &kp LG(N3)     &none
+            &none        &none          &none          &none           &none                &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &none
+            &none        &none          &none          &none           &none                &none          &none          &none          &none          &none
+                                                       &none           &none                &none          &none
             >;
         };
     };
