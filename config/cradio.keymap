@@ -38,10 +38,10 @@
 
         default_layer {
             bindings = <
-            &lt 4 Q      &kp W          &kp F          &kp P           &kp B               &kp J            &kp L         &kp U          &kp Y          &lt 5 SINGLE_QUOTE
-            &mt LGUI A   &mt LALT R     &mt LSHIFT S   &mt LCTRL T     &kp G               &kp M            &mt RCTRL N   &mt RSHIFT E   &mt RALT I     &mt RGUI O
+            &kp Q        &kp W          &kp F          &kp P           &kp B               &kp J            &kp L         &kp U          &kp Y          &kp SINGLE_QUOTE
+            &lt 4 A      &mt LALT R     &mt LSHIFT S   &mt LCTRL T     &kp G               &kp M            &mt RCTRL N   &mt RSHIFT E   &mt RALT I     &mt RGUI O
             &kp Z        &kp X          &kp C          &kp D           &kp V               &kp K            &kp H         &kp COMMA      &kp DOT        &kp FSLH
-                                                       &lt 2 ESC       &lt 1 TAB           &lt 1 SPACE      &lt 3 BSPC
+                                                       &lt 3 ESC       &lt 2 TAB           &lt 1 SPACE      &lt 5 BSPC
             >;
         };
 
@@ -90,8 +90,8 @@
         // Layer 5: Mouse movement
         mouse_layer {
             bindings = <
-            &none        &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &none                &none          &mkp LCLK      &mkp RCLK      &mkp MCLK      &none
-            &none        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none                &none          &none          &none          &none          &none
+            &none        &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN  &none                &none          &none          &none          &none          &none
+            &none        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none                &none          &mkp LCLK      &mkp RCLK      &mkp MCLK      &none
             &none        &none          &none          &none           &none                &none          &none          &none          &none          &none
                                                        &none           &none                &none          &none
             >;
